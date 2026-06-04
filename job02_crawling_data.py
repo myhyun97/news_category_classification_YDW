@@ -47,11 +47,11 @@ for i in range(1,180):
             title = driver.find_element(By.XPATH, title_xpath).text
             print(title)
             df_section_titles = pd.DataFrame([title], columns=['titles'])
-            df_section_titles['category'] = '정치'
+            df_section_titles['category'] = 'Politics'
             df_titles = pd.concat([df_titles, df_section_titles], ignore_index=True)
         except:
             print('error',i,j)
 
-df_titles.to_csv('./data/naver_news_section_정치.csv', index=False)
+df_titles.to_csv('./data/naver_news_section_Politics.csv', index=False)
 
 
